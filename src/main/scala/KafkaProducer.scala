@@ -28,10 +28,13 @@ object KafkaProducerGenerator {
 
 
   def main(args:Array[String]):Unit = {
+    if (args.length == 0) {
+      println("{brokerlist} {topic} {message}")
+    }
 
-  val brokerlist="neutron:9092"
-  val topic = "gamer"
-  val testmessage = "This is a test of the KafkaProducer"
+  val brokerlist= args(0)
+  val topic = args(1)
+  val testmessage = args(2)
   val producer = getNewProducer(brokerlist)
 
   val message = new ProducerRecord[String, String](topic, testmessage)
