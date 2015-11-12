@@ -1,7 +1,7 @@
 # KafkaProducer
 Simple Kafka Producer in Scala.
 
-All parameters are hard coded.
+Parameters to pass in:
 
   val brokerlist=
   
@@ -16,4 +16,4 @@ All parameters are hard coded.
   		testmessage:  Message to write to the kafka topic
 
 
-
+The testmessage will be written once to the queue.
